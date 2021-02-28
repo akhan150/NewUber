@@ -12,13 +12,15 @@ const init = async () => {
     const messages = require('./routes/api/messages');
     const trips = require('./routes/api/trips');
     const reviews = require('./routes/api/reviews');
+    const index = require('./routes/index');
     server.route(users);
     server.route(riders);
     server.route(drivers);
     server.route(messages);
     server.route(trips);
     server.route(reviews);
-    module.exports = [].concat(users, riders, drivers, messages, trips, reviews);
+    server.route(index);
+    module.exports = [].concat(users, riders, drivers, messages, trips, reviews, index);
     server.start();
     console.log('Server running on %s', server.info.uri);
 };

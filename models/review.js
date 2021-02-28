@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = require("../index.js");
+const sequelize = require("../db.js");
 
 const Review = sequelize.define('Review', {
   // Model attributes are defined here
