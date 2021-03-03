@@ -1,4 +1,8 @@
 const tripsController = require("../../controllers/tripsController");
+
+// @route    POST /trips
+// @desc     Adds trips
+// @access   PUBLIC
 const post = {
     method: 'POST',
      path: '/trips',
@@ -7,6 +11,9 @@ const post = {
         return tripsController.create(trip);
     }
 };
+// @route    GET /trips
+// @desc     List of all Trips
+// @access   PUBLIC
 const get = {
     method: 'GET',
      path: '/trips',

@@ -1,4 +1,8 @@
 const reviewsController = require("../../controllers/reviewsController");
+
+// @route    POST /reviews
+// @desc     Adds reviews
+// @access   PUBLIC
 const post = {
     method: 'POST',
      path: '/reviews',
@@ -7,6 +11,9 @@ const post = {
         return reviewsController.create(review);
     }
 };
+// @route    GET /reviews
+// @desc     List of all Reviews
+// @access   PUBLIC
 const get = {
     method: 'GET',
      path: '/reviews',

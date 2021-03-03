@@ -1,4 +1,8 @@
 const messagesController = require("../../controllers/messagesController");
+
+// @route    POST /messages
+// @desc     Adds messages
+// @access   PUBLIC
 const post = {
     method: 'POST',
      path: '/messages',
@@ -7,6 +11,9 @@ const post = {
         return messagesController.create(message);
     }
 };
+// @route    GET /messages
+// @desc     List of all Messages
+// @access   PUBLIC
 const get = {
     method: 'GET',
      path: '/messages',
